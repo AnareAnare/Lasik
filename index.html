@@ -8,9 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="./style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script defer src="./inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="./index.js" defer></script>
     <title>Лазерная коррекция зрения Lasik</title>
 </head>
@@ -117,63 +119,148 @@
                 </div>
             </section>
             <section id="sales">
-                <div class="sales__wrapper">
-                    <div class="sales__logo">
-                        <img src="./img/logo.svg" alt="логотип">
+                <div class="sales__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide sales__wrapper">
+                            <div class="sales__logo">
+                                <img src="./img/logo.svg" alt="логотип">
+                            </div>
+                            <div class="sales__flex">
+                                <div class="sales__text">
+                                    <div class="sales__period">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37"
+                                            viewBox="0 0 38 37" fill="none">
+                                            <path
+                                                d="M11.6452 16.9584H14.7285V20.0417H11.6452V16.9584ZM33.2285 7.70842V29.2917C33.2285 31.003 31.8564 32.3751 30.1452 32.3751H8.56185C6.8506 32.3751 5.47852 30.9876 5.47852 29.2917V7.70842C5.47852 6.01258 6.86602 4.62508 8.56185 4.62508H10.1035V1.54175H13.1868V4.62508H25.5202V1.54175H28.6035V4.62508H30.1452C31.8564 4.62508 33.2285 6.01258 33.2285 7.70842ZM8.56185 10.7917H30.1452V7.70842H8.56185V10.7917ZM30.1452 29.2917V13.8751H8.56185V29.2917H30.1452ZM23.9785 20.0417V16.9584H27.0618V20.0417H23.9785ZM17.8118 20.0417V16.9584H20.8952V20.0417H17.8118ZM11.6452 23.1251H14.7285V26.2084H11.6452V23.1251ZM23.9785 26.2084V23.1251H27.0618V26.2084H23.9785ZM17.8118 26.2084V23.1251H20.8952V26.2084H17.8118Z"
+                                                fill="#333333" />
+                                        </svg>
+                                        <span>Акция до 31 декабря</span>
+                                    </div>
+                                    <div class="sales__procedure">Диагностика</div>
+                                    <h3 class="sales__title">Комплексная диагностика со скидкой 50%</h3>
+                                    <div class="sales__direction">Для пенсионеров и пациентов, пользующихся льготами
+                                    </div>
+                                    <div class="sales__buttons">
+                                        <button class="sales__btn">
+                                            Записаться со скидкой
+                                        </button>
+                                        <a href="#" class="sales__link">
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M15.3157 8.70711C15.7063 8.31658 15.7063 7.68342 15.3157 7.29289L8.95179 0.928932C8.56126 0.538408 7.9281 0.538408 7.53757 0.928932C7.14705 1.31946 7.14705 1.95262 7.53757 2.34315L13.1944 8L7.53757 13.6569C7.14705 14.0474 7.14705 14.6805 7.53757 15.0711C7.9281 15.4616 8.56126 15.4616 8.95179 15.0711L15.3157 8.70711ZM0.853516 9H14.6086V7H0.853516V9Z"
+                                                    fill="#0859A3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sales__picture">
+                                    <img src="./img/sales.png" alt="Комплексная диагностика">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide sales__wrapper">
+                            <div class="sales__logo">
+                                <img src="./img/logo.svg" alt="логотип">
+                            </div>
+                            <div class="sales__flex">
+                                <div class="sales__text">
+                                    <div class="sales__period">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37"
+                                            viewBox="0 0 38 37" fill="none">
+                                            <path
+                                                d="M11.6452 16.9584H14.7285V20.0417H11.6452V16.9584ZM33.2285 7.70842V29.2917C33.2285 31.003 31.8564 32.3751 30.1452 32.3751H8.56185C6.8506 32.3751 5.47852 30.9876 5.47852 29.2917V7.70842C5.47852 6.01258 6.86602 4.62508 8.56185 4.62508H10.1035V1.54175H13.1868V4.62508H25.5202V1.54175H28.6035V4.62508H30.1452C31.8564 4.62508 33.2285 6.01258 33.2285 7.70842ZM8.56185 10.7917H30.1452V7.70842H8.56185V10.7917ZM30.1452 29.2917V13.8751H8.56185V29.2917H30.1452ZM23.9785 20.0417V16.9584H27.0618V20.0417H23.9785ZM17.8118 20.0417V16.9584H20.8952V20.0417H17.8118ZM11.6452 23.1251H14.7285V26.2084H11.6452V23.1251ZM23.9785 26.2084V23.1251H27.0618V26.2084H23.9785ZM17.8118 26.2084V23.1251H20.8952V26.2084H17.8118Z"
+                                                fill="#333333" />
+                                        </svg>
+                                        <span>Акция до 31 декабря</span>
+                                    </div>
+                                    <div class="sales__procedure">Диагностика</div>
+                                    <h3 class="sales__title">Комплексная диагностика со скидкой 50%</h3>
+                                    <div class="sales__direction">Для пенсионеров и пациентов, пользующихся льготами
+                                    </div>
+                                    <div class="sales__buttons">
+                                        <button class="sales__btn">
+                                            Записаться со скидкой
+                                        </button>
+                                        <a href="#" class="sales__link">
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M15.3157 8.70711C15.7063 8.31658 15.7063 7.68342 15.3157 7.29289L8.95179 0.928932C8.56126 0.538408 7.9281 0.538408 7.53757 0.928932C7.14705 1.31946 7.14705 1.95262 7.53757 2.34315L13.1944 8L7.53757 13.6569C7.14705 14.0474 7.14705 14.6805 7.53757 15.0711C7.9281 15.4616 8.56126 15.4616 8.95179 15.0711L15.3157 8.70711ZM0.853516 9H14.6086V7H0.853516V9Z"
+                                                    fill="#0859A3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sales__picture">
+                                    <img src="./img/sales.png" alt="Комплексная диагностика">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-slide sales__wrapper">
+                            <div class="sales__logo">
+                                <img src="./img/logo.svg" alt="логотип">
+                            </div>
+                            <div class="sales__flex">
+                                <div class="sales__text">
+                                    <div class="sales__period">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37"
+                                            viewBox="0 0 38 37" fill="none">
+                                            <path
+                                                d="M11.6452 16.9584H14.7285V20.0417H11.6452V16.9584ZM33.2285 7.70842V29.2917C33.2285 31.003 31.8564 32.3751 30.1452 32.3751H8.56185C6.8506 32.3751 5.47852 30.9876 5.47852 29.2917V7.70842C5.47852 6.01258 6.86602 4.62508 8.56185 4.62508H10.1035V1.54175H13.1868V4.62508H25.5202V1.54175H28.6035V4.62508H30.1452C31.8564 4.62508 33.2285 6.01258 33.2285 7.70842ZM8.56185 10.7917H30.1452V7.70842H8.56185V10.7917ZM30.1452 29.2917V13.8751H8.56185V29.2917H30.1452ZM23.9785 20.0417V16.9584H27.0618V20.0417H23.9785ZM17.8118 20.0417V16.9584H20.8952V20.0417H17.8118ZM11.6452 23.1251H14.7285V26.2084H11.6452V23.1251ZM23.9785 26.2084V23.1251H27.0618V26.2084H23.9785ZM17.8118 26.2084V23.1251H20.8952V26.2084H17.8118Z"
+                                                fill="#333333" />
+                                        </svg>
+                                        <span>Акция до 31 декабря</span>
+                                    </div>
+                                    <div class="sales__procedure">Диагностика</div>
+                                    <h3 class="sales__title">Комплексная диагностика со скидкой 50%</h3>
+                                    <div class="sales__direction">Для пенсионеров и пациентов, пользующихся льготами
+                                    </div>
+                                    <div class="sales__buttons">
+                                        <button class="sales__btn">
+                                            Записаться со скидкой
+                                        </button>
+                                        <a href="#" class="sales__link">
+                                            Подробнее
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <path
+                                                    d="M15.3157 8.70711C15.7063 8.31658 15.7063 7.68342 15.3157 7.29289L8.95179 0.928932C8.56126 0.538408 7.9281 0.538408 7.53757 0.928932C7.14705 1.31946 7.14705 1.95262 7.53757 2.34315L13.1944 8L7.53757 13.6569C7.14705 14.0474 7.14705 14.6805 7.53757 15.0711C7.9281 15.4616 8.56126 15.4616 8.95179 15.0711L15.3157 8.70711ZM0.853516 9H14.6086V7H0.853516V9Z"
+                                                    fill="#0859A3" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sales__picture">
+                                    <img src="./img/sales.png" alt="Комплексная диагностика">
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="sales__flex">
-                        <div class="sales__text">
-                            <div class="sales__period">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="37" viewBox="0 0 38 37"
-                                    fill="none">
-                                    <path
-                                        d="M11.6452 16.9584H14.7285V20.0417H11.6452V16.9584ZM33.2285 7.70842V29.2917C33.2285 31.003 31.8564 32.3751 30.1452 32.3751H8.56185C6.8506 32.3751 5.47852 30.9876 5.47852 29.2917V7.70842C5.47852 6.01258 6.86602 4.62508 8.56185 4.62508H10.1035V1.54175H13.1868V4.62508H25.5202V1.54175H28.6035V4.62508H30.1452C31.8564 4.62508 33.2285 6.01258 33.2285 7.70842ZM8.56185 10.7917H30.1452V7.70842H8.56185V10.7917ZM30.1452 29.2917V13.8751H8.56185V29.2917H30.1452ZM23.9785 20.0417V16.9584H27.0618V20.0417H23.9785ZM17.8118 20.0417V16.9584H20.8952V20.0417H17.8118ZM11.6452 23.1251H14.7285V26.2084H11.6452V23.1251ZM23.9785 26.2084V23.1251H27.0618V26.2084H23.9785ZM17.8118 26.2084V23.1251H20.8952V26.2084H17.8118Z"
-                                        fill="#333333" />
-                                </svg>
-                                <span>Акция до 31 декабря</span>
-                            </div>
-                            <div class="sales__procedure">Диагностика</div>
-                            <h3 class="sales__title">Комплексная диагностика со скидкой 50%</h3>
-                            <div class="sales__direction">Для пенсионеров и пациентов, пользующихся льготами</div>
-                            <div class="sales__buttons">
-                                <button class="sales__btn">
-                                    Записаться со скидкой
-                                </button>
-                                <a href="#" class="sales__link">
-                                    Подробнее
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                                        fill="none">
-                                        <path
-                                            d="M15.3157 8.70711C15.7063 8.31658 15.7063 7.68342 15.3157 7.29289L8.95179 0.928932C8.56126 0.538408 7.9281 0.538408 7.53757 0.928932C7.14705 1.31946 7.14705 1.95262 7.53757 2.34315L13.1944 8L7.53757 13.6569C7.14705 14.0474 7.14705 14.6805 7.53757 15.0711C7.9281 15.4616 8.56126 15.4616 8.95179 15.0711L15.3157 8.70711ZM0.853516 9H14.6086V7H0.853516V9Z"
-                                            fill="#0859A3" />
-                                    </svg>
-                                </a>
-                            </div>
+                    <div class="sales__swiper-btns">
+                        <button class="swiper-button-prev sales__swiper-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33"
+                                fill="none">
+                                <path
+                                    d="M21.1349 22.7854L15.0282 16.6787L21.1349 10.5587L19.2549 8.67871L11.2549 16.6787L19.2549 24.6787L21.1349 22.7854Z"
+                                    fill="#7D7D7D" />
+                            </svg>
+                        </button>
+                        <div class="sales__swiper-count swiper-pagination">
                         </div>
-                        <div class="sales__picture">
-                            <img src="./img/sales.png" alt="Комплексная диагностика">
-                        </div>
-                        <div class="sales__swiper-btns">
-                            <button class="sales__swiper-prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33"
-                                    fill="none">
-                                    <path
-                                        d="M21.1349 22.7854L15.0282 16.6787L21.1349 10.5587L19.2549 8.67871L11.2549 16.6787L19.2549 24.6787L21.1349 22.7854Z"
-                                        fill="#7D7D7D" />
-                                </svg>
-                            </button>
-                            <div class="sales__swiper-count">
-                                6 / 10
-                            </div>
-                            <button class="sales__swiper-next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33"
-                                    fill="none">
-                                    <path
-                                        d="M12.3319 22.7854L18.4386 16.6787L12.3319 10.5587L14.2119 8.67871L22.2119 16.6787L14.2119 24.6787L12.3319 22.7854Z"
-                                        fill="#7D7D7D" />
-                                </svg>
-                            </button>
-                        </div>
+                        <button class="swiper-button-next sales__swiper-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33"
+                                fill="none">
+                                <path
+                                    d="M12.3319 22.7854L18.4386 16.6787L12.3319 10.5587L14.2119 8.67871L22.2119 16.6787L14.2119 24.6787L12.3319 22.7854Z"
+                                    fill="#7D7D7D" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -210,16 +297,16 @@
             <section id="services-video">
                 <h2 class="services-description__title">Видео о лазерной коррекции зрения Lasik</h2>
                 <div class="services-video__flex">
-                    <div class="services-video__video">
-                        <button class="services-video__control">
+                    <a href="https://youtu.be/cQAIMZltXh4" class="services-video__video" data-fancybox>
+                        <span class="services-video__control">
                             <svg xmlns="http://www.w3.org/2000/svg" width="97" height="54" viewBox="0 0 97 54"
                                 fill="none">
                                 <rect x="0.853516" width="96" height="54" rx="11" fill="#0859A3" />
                                 <path d="M64.8535 27L40.8535 40.8564L40.8535 13.1436L64.8535 27Z" fill="white" />
                             </svg>
-                        </button>
+                        </span>
                         <img src="./img/video.jpg" alt="как проходит операция">
-                    </div>
+                    </a>
                     <div class="services-video__text">
                         <h3 class="services-description__title">
                             Как проходит операция
@@ -309,68 +396,291 @@
                     </div>
                     <a href="/company/reviews/" class="services-reviews__link">Смотреть&nbsp;все&nbsp;отзывы</a>
                 </div>
-                <div class="services-reviews__swiper">
-                    <div class="services-reviews__swiper-wrapper">
-                        <div class="services-reviews__swiper-img">
-                            <img src="./img/review1.jpg" alt="имя">
+                <div class="services-reviews__relative">
+                    <div class="swiper services-reviews__swiper">
+                        <div class="swiper-wrapper services-reviews__swiper-wrapper">
+                            <div class="swiper-slide services-reviews__swiper-img services-reviews__active"
+                                data-path="review1">
+                                <img src="./img/review1.jpg" alt="имя">
+                            </div>
+                            <div class="swiper-slide services-reviews__swiper-img" data-path="review1">
+                                <img src="./img/review2.jpg" alt="имя">
+                            </div>
+                            <div class="swiper-slide services-reviews__swiper-img" data-path="review2">
+                                <img src="./img/review3.jpg" alt="имя">
+                            </div>
+                            <div class="swiper-slide services-reviews__swiper-img" data-path="review1">
+                                <img src="./img/review4.jpg" alt="имя">
+                            </div>
+                            <div class="swiper-slide services-reviews__swiper-img" data-path="review2">
+                                <img src="./img/review5.jpg" alt="имя">
+                            </div>
+                            <div class="swiper-slide services-reviews__swiper-img" data-path="review1">
+                                <img src="./img/review6.jpg" alt="имя">
+                            </div>
+                            <div class="swiper-slide services-reviews__swiper-img" data-path="review2">
+                                <img src="./img/review6.jpg" alt="имя">
+                            </div>
+                            <div class="swiper-slide services-reviews__swiper-img" data-path="review1">
+                                <img src="./img/review6.jpg" alt="имя">
+                            </div>
                         </div>
-                        <div class="services-reviews__swiper-img">
-                            <img src="./img/review2.jpg" alt="имя">
+                    </div>
+                    <div class="services-reviews__swiper-btns">
+                        <button class="swiper-button-prev services-reviews__btn-prev"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="43" height="84" viewBox="0 0 43 84"
+                                fill="none">
+                                <path
+                                    d="M0.37304 42C0.373035 65.196 19.1771 84 42.373 84L42.373 7.34351e-06C19.1771 3.2878e-06 0.373044 18.804 0.37304 42Z"
+                                    fill="#0859A3" />
+                                <path d="M28.0938 31.9204L18.8538 41.5804L28.0937 51.2404" stroke="white"
+                                    stroke-width="3.88724" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
+                        <button class="swiper-button-next services-reviews__btn-next"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="43" height="84" viewBox="0 0 43 84"
+                                fill="none">
+                                <path
+                                    d="M42.8535 42C42.8535 18.804 24.0495 1.6439e-06 0.853508 3.67176e-06L0.853516 84C24.0495 84 42.8535 65.196 42.8535 42Z"
+                                    fill="#0859A3" />
+                                <path d="M15.1348 52.0801L24.3748 42.4201L15.1348 32.7601" stroke="white"
+                                    stroke-width="3.88724" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="services-reviews__content">
+                    <div class="services-reviews__inner services-reviews__inner_active" data-target="review1">
+                        <div class="services-reviews__inner_img">
+                            <button class="services-video__control">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="97" height="54" viewBox="0 0 97 54"
+                                    fill="none">
+                                    <rect x="0.853516" width="96" height="54" rx="11" fill="#0859A3" />
+                                    <path d="M64.8535 27L40.8535 40.8564L40.8535 13.1436L64.8535 27Z" fill="white" />
+                                </svg>
+                            </button>
+                            <img src="./img/review.jpg" alt="видео отзыв">
                         </div>
-                        <div class="services-reviews__swiper-img">
-                            <img src="./img/review3.jpg" alt="имя">
+                        <div class="services-reviews__inner_text">
+                            <h4 class="services-reviews__inner_title">Алёна Антипова</h4>
+                            <p class="services-reviews__inner_review">«Единственное о чем жалею, что не сделала этого
+                                раньше!» это самый частый ответ о котором я слышала раньше, теперь я присоединяюсь к
+                                каждому
+                                слову</p>
+                            <div class="services-reviews__inner_btns">
+                                <button class="sales__btn">Расскажите о вашем зрении</button>
+                                <span>Дадим грамотную консультацию</span>
+                            </div>
+                            <a href="#" class="services-reviews__link" data-event="jqm" data-name="feedback"
+                                data-hide-specialist data-param-id="46">Оставить свой отзыв</a>
                         </div>
-                        <div class="services-reviews__swiper-img">
-                            <img src="./img/review4.jpg" alt="имя">
+                    </div>
+                    <div class="services-reviews__inner" data-target="review2">
+                        <div class="services-reviews__inner_img">
+                            <button class="services-video__control">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="97" height="54" viewBox="0 0 97 54"
+                                    fill="none">
+                                    <rect x="0.853516" width="96" height="54" rx="11" fill="#0859A3" />
+                                    <path d="M64.8535 27L40.8535 40.8564L40.8535 13.1436L64.8535 27Z" fill="white" />
+                                </svg>
+                            </button>
+                            <img src="./img/review.jpg" alt="видео отзыв">
                         </div>
-                        <div class="services-reviews__swiper-img">
-                            <img src="./img/review5.jpg" alt="имя">
-                        </div>
-                        <div class="services-reviews__swiper-img">
-                            <img src="./img/review6.jpg" alt="имя">
-                        </div>
-                        <div class="services-reviews__swiper-btns">
-                            <button class="services-reviews__btn-prev"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="43" height="84" viewBox="0 0 43 84" fill="none">
-                                    <path
-                                        d="M0.37304 42C0.373035 65.196 19.1771 84 42.373 84L42.373 7.34351e-06C19.1771 3.2878e-06 0.373044 18.804 0.37304 42Z"
-                                        fill="#0859A3" />
-                                    <path d="M28.0938 31.9204L18.8538 41.5804L28.0937 51.2404" stroke="white"
-                                        stroke-width="3.88724" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg></button>
-                            <button class="services-reviews__btn-next"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="43" height="84" viewBox="0 0 43 84" fill="none">
-                                    <path
-                                        d="M42.8535 42C42.8535 18.804 24.0495 1.6439e-06 0.853508 3.67176e-06L0.853516 84C24.0495 84 42.8535 65.196 42.8535 42Z"
-                                        fill="#0859A3" />
-                                    <path d="M15.1348 52.0801L24.3748 42.4201L15.1348 32.7601" stroke="white"
-                                        stroke-width="3.88724" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg></button>
+                        <div class="services-reviews__inner_text">
+                            <h4 class="services-reviews__inner_title">Сергей</h4>
+                            <p class="services-reviews__inner_review">«Единственное о чем жалею, что не сделала этого
+                                раньше!» это самый частый ответ о котором я слышала раньше, теперь я присоединяюсь к
+                                каждому
+                                слову</p>
+                            <div class="services-reviews__inner_btns">
+                                <button class="sales__btn">Расскажите о вашем зрении</button>
+                                <span>Дадим грамотную консультацию</span>
+                            </div>
+                            <a href="#" class="services-reviews__link" data-event="jqm" data-name="feedback"
+                                data-hide-specialist data-param-id="46">Оставить свой отзыв</a>
                         </div>
                     </div>
                 </div>
-                <div class="services-reviews__inner">
-                    <div class="services-reviews__inner_img">
-                        <button class="services-video__control">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="97" height="54" viewBox="0 0 97 54"
-                                fill="none">
-                                <rect x="0.853516" width="96" height="54" rx="11" fill="#0859A3" />
-                                <path d="M64.8535 27L40.8535 40.8564L40.8535 13.1436L64.8535 27Z" fill="white" />
-                            </svg>
-                        </button>
-                        <img src="./img/review.jpg" alt="видео отзыв">
+            </section>
+            <section id="services-retings">
+                <div class="services-retings__flex">
+                    <div class="services-retings__left">
+                        <h2 class="services-description__title services-description__title_nomargin">
+                            Независимые рейтинги
+                        </h2>
+                        <a href="/company/reviews/" class="services-reviews__link">Отзывы&nbsp;о&nbsp;нас</a>
                     </div>
-                    <div class="services-reviews__inner_text">
-                        <h4 class="services-reviews__inner_title">Алёна Антипова</h4>
-                        <p class="services-reviews__inner_review">«Единственное о чем жалею, что не сделала этого
-                            раньше!» это самый частый ответ о котором я слышала раньше, теперь я присоединяюсь к каждому
-                            слову</p>
-                        <div class="services-reviews__inner_btns">
-                            <button class="sales__btn">Расскажите о вашем зрении</button>
-                            <span>Дадим грамотную консультацию</span>
+                    <div class="services-retings__right">
+                        <div class="services-retings__item">
+                            <img src="./img/yandex.png" alt="">
+                            <span>Рейтинг</span>
+                            <span class="services-retings__bold">4,8 из 5</span>
                         </div>
-                        <a href="#" class="services-reviews__link" data-event="jqm" data-name="feedback"
-                            data-hide-specialist data-param-id="46">Оставить свой отзыв</a>
+                        <div class="services-retings__item">
+                            <img src="./img/zoon.png" alt="">
+                            <span>Рейтинг</span>
+                            <span aria-label="рейтинг 4.8 из 5">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_690)">
+                                        <path
+                                            d="M18.5142 7.33439L12.727 6.45038L10.133 0.925163C9.9393 0.512576 9.26237 0.512576 9.06863 0.925163L6.47545 6.45038L0.688248 7.33439C0.21291 7.40733 0.023088 7.98543 0.356452 8.32664L4.56076 12.6361L3.56695 18.7284C3.48772 19.2124 4.00463 19.5755 4.43212 19.3379L9.60123 16.4811L14.7703 19.3386C15.1939 19.574 15.7155 19.2178 15.6355 18.7292L14.6417 12.6368L18.846 8.32742C19.1794 7.98543 18.9888 7.40733 18.5142 7.33439Z"
+                                            fill="#E6E6E6" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_690">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.188477 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="services-retings__item">
+                            <img src="./img/yell.png" alt="">
+                            <span>Рейтинг</span>
+                            <span class="services-retings__bold">4,8 из 5</span>
+                        </div>
+                        <div class="services-retings__item">
+                            <img src="./img/kleos.png" alt="">
+                            <span>Рейтинг</span>
+                            <span aria-label="рейтинг 4.8 из 5">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_688)">
+                                        <path
+                                            d="M19.2769 7.33439L13.4897 6.45038L10.8957 0.925163C10.702 0.512576 10.0251 0.512576 9.83133 0.925163L7.23815 6.45038L1.45094 7.33439C0.975605 7.40733 0.785783 7.98543 1.11915 8.32664L5.32346 12.6361L4.32964 18.7284C4.25042 19.2124 4.76733 19.5755 5.19482 19.3379L10.3639 16.4811L15.533 19.3386C15.9566 19.574 16.4782 19.2178 16.3982 18.7292L15.4044 12.6368L19.6087 8.32742C19.9421 7.98543 19.7515 7.40733 19.2769 7.33439Z"
+                                            fill="#FFC107" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_688">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.951172 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_35_690)">
+                                        <path
+                                            d="M18.5142 7.33439L12.727 6.45038L10.133 0.925163C9.9393 0.512576 9.26237 0.512576 9.06863 0.925163L6.47545 6.45038L0.688248 7.33439C0.21291 7.40733 0.023088 7.98543 0.356452 8.32664L4.56076 12.6361L3.56695 18.7284C3.48772 19.2124 4.00463 19.5755 4.43212 19.3379L9.60123 16.4811L14.7703 19.3386C15.1939 19.574 15.7155 19.2178 15.6355 18.7292L14.6417 12.6368L18.846 8.32742C19.1794 7.98543 18.9888 7.40733 18.5142 7.33439Z"
+                                            fill="#E6E6E6" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_35_690">
+                                            <rect width="18.8253" height="18.8253" fill="white"
+                                                transform="translate(0.188477 0.601074)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="services-retings__item">
+                            <img src="./img/doctor.png" alt="">
+                            <span>Рейтинг</span>
+                            <span class="services-retings__bold">4,8 из 5</span>
+                        </div>
+                        <div class="services-retings__item">
+                            <img src="./img/spr.png" alt="">
+                            <span>Рейтинг</span>
+                            <span class="services-retings__bold">14+/-2</span>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -35,7 +35,7 @@
     border-radius: 6px;
     border: 1px solid #DEDEDE;
     background: #FFF;
-    color:#333;
+    color: #333;
     font-family: "Montserrat";
     font-size: 16px;
     font-style: normal;
@@ -45,8 +45,8 @@
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
-.services-tabs__link:focus, 
-.services-tabs__link:hover, 
+.services-tabs__link:focus,
+.services-tabs__link:hover,
 .services-tabs__link:active {
     color: #fff;
     background-color: #0859A3;
@@ -151,7 +151,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 142%; 
+    line-height: 142%;
 }
 
 .services-description__info_top {
@@ -187,8 +187,13 @@
     margin-bottom: 72px;
 }
 
-.sales__wrapper {
+.sales__swiper {
     position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.sales__wrapper {
     display: flex;
     min-height: 390px;
     border-radius: 20px;
@@ -312,6 +317,7 @@
 
 .sales__swiper-btns {
     position: absolute;
+    z-index: 5;
     bottom: 54px;
     right: 96px;
     width: 198px;
@@ -341,6 +347,22 @@
     font-weight: 600;
     line-height: normal;
     color: #7D7D7D;
+}
+
+.sales__swiper-count.swiper-pagination {
+    position: static;
+    width: auto;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    content: '';
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: static;
+    margin-top: 0;
 }
 
 #services-benefits {
@@ -394,7 +416,7 @@
     color: #333;
     font-family: "Montserrat";
     font-style: normal;
-    line-height: normal; 
+    line-height: normal;
 }
 
 .services-video__flex {
@@ -436,12 +458,12 @@
     transition: scale 0.2s ease-in-out;
 }
 
-.services-video__control:focus,
-.services-video__control:hover {
+.services-video__video:focus .services-video__control,
+.services-video__video:hover .services-video__control {
     scale: 1.2;
 }
 
-.services-video__control:focus {
+.services-video__video:focus {
     outline: none;
 }
 
@@ -615,8 +637,8 @@
 }
 
 .services-reviews__inner {
+    display: none;
     -webkit-appearance: none;
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 67px;
@@ -624,6 +646,10 @@
     border-radius: 13px;
     background: #FFF;
     box-shadow: 7px 13px 31.7px 0px rgba(0, 0, 0, 0.15);
+}
+
+.services-reviews__inner_active {
+    display: flex;
 }
 
 .services-reviews__inner_img {
@@ -636,7 +662,6 @@
 }
 
 .services-reviews__inner_img img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -681,17 +706,17 @@
     gap: 37px;
 }
 
-.services-reviews__swiper-wrapper {
-    position: relative;
-    display: flex;
-    gap: 32px;
-}
-
 .services-reviews__swiper-img {
-    width: calc((100% - 5 * 32px) / 6);
     max-height: 177px;
     border-radius: 17px;
+    border: 2px solid transparent;
     overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.services-reviews__active {
+    border-color: #0859A3;
 }
 
 .services-reviews__swiper-img img {
@@ -704,6 +729,10 @@
     margin-bottom: 32px;
 }
 
+.services-reviews__relative {
+    position: relative;
+}
+
 .services-reviews__swiper-btns {
     position: absolute;
     width: 100%;
@@ -713,6 +742,8 @@
 .services-reviews__btn-prev,
 .services-reviews__btn-next {
     padding: 0;
+    width: 42px;
+    height: 84px;
     background: transparent;
     border: none;
     position: absolute;
@@ -721,24 +752,88 @@
 }
 
 .services-reviews__btn-prev {
-    transform: translateY(-50%);
-    top: 50%;
+    top: -165px;
     left: -80px;
 }
 
 .services-reviews__btn-next {
-    transform: translateY(-50%);
-    top: 50%;
+    top: -165px;
     right: -80px;
 }
 
 .services-reviews__btn-prev:focus,
 .services-reviews__btn-next:focus {
     outline: none;
-    transform: scale(1.2) translateY(-50%);
+    transform: scale(1.2);
 }
 
 .services-reviews__btn-prev:hover,
 .services-reviews__btn-next:hover {
-    transform: scale(1.2) translateY(-50%);
+    transform: scale(1.2);
+}
+
+#services-retings {
+    margin-bottom: 87px;
+    font-style: normal;
+    line-height: normal;
+    font-family: "Montserrat";
+    color: #333;
+}
+
+.services-retings__flex {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-retings__left {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    max-width: 351px;
+}
+
+.services-retings__right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+    flex-grow: 1;
+}
+
+.services-retings__item {
+    width: calc((100% - 5 * 11px) / 6);
+    min-height: 185px;
+    padding: 30px 15px;
+    border-radius: 10px;
+    background: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-retings__left .services-reviews__link {
+    width: fit-content;
+}
+
+.services-retings__item img {
+    margin-bottom: auto;
+    object-fit: contain;
+    width: 100%;
+    max-height: 56px;
+}
+
+.services-retings__item span {
+    font-weight: 500;
+    line-height: 108.5%; 
+    font-size: 16px;
+}
+
+.services-retings__item .services-retings__bold {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 108.5%;
+    color: #000;
 }
