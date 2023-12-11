@@ -62,4 +62,49 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  if (document.querySelector('.services-prices__list')) {
+    $('.services-prices__content').hide();
+    $(document).on('click', '.services-prices__btn', function () {
+      $(this).next().slideToggle();
+      $(this).parent().siblings('.services-prices__item').find('.services-prices__content').slideUp();
+      $(this).find('.services-prices__close').toggleClass('services-prices__close_active');
+      $(this).parent().siblings('.services-prices__item').find('.services-prices__close').removeClass('services-prices__close_active');
+      return false;
+    });
+  }
+
+  if(document.querySelector('.servicesSwiperMain')) {
+    const swiper1 = new Swiper(".servicesSwiper", {
+      direction: "vertical",
+      spaceBetween: 20,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+
+    const swiper2 = new Swiper(".servicesSwiperMain", {
+      navigation: {
+        nextEl: ".servicesSwiperMain-next",
+        prevEl: ".servicesSwiperMain-prev",
+      },
+      thumbs: {
+        swiper: swiper1,
+      },
+    });
+  }
+
+  if(document.querySelector('.services-lisences__swiper')) {
+    const swiperLisence = new Swiper(".services-lisences__swiper", {
+      spaceBetween: 33,
+      slidesPerView: 6,
+      navigation: {
+        nextEl: ".services-lisences__next",
+        prevEl: ".services-lisences__prev",
+      },
+    });
+  }
 });
