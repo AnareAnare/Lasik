@@ -107,4 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   }
+
+  if(document.querySelector('.additional-services__swiper')) {
+    const swiper = new Swiper(".additional-services__swiper", {
+      slidesPerView: 'auto',
+      spaceBetween: 28,
+      loop: true,
+      navigation: {
+        nextEl: ".additional-services__next",
+        prevEl: ".additional-services__prev",
+      },
+    });
+  }
 });
