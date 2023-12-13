@@ -44,6 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
         nextEl: ".services-reviews__btn-next",
         prevEl: ".services-reviews__btn-prev",
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 13
+        },
+        480: {
+          slidesPerView: 'auto',
+          spaceBetween: 20
+        },
+        1025: {
+          slidesPerView: 6,
+          spaceBetween: 20
+        },
+        1660: {
+          slidesPerView: 6,
+          spaceBetween: 32
+        },
+      },
     });
   }
 
@@ -84,6 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollbar: {
         el: ".swiper-scrollbar",
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 13,
+          direction: "horizontal",
+        },
+        1201: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+          direction: "vertical",
+        },
+      }
     });
 
     const swiper2 = new Swiper(".servicesSwiperMain", {
