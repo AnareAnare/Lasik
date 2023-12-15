@@ -124,6 +124,16 @@ document.addEventListener('DOMContentLoaded', () => {
       thumbs: {
         swiper: swiper1,
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 14,
+        },
+        577: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+      }
     });
   }
 
@@ -135,6 +145,24 @@ document.addEventListener('DOMContentLoaded', () => {
         nextEl: ".services-lisences__next",
         prevEl: ".services-lisences__prev",
       },
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 22,
+        },
+        577: {
+          slidesPerView: 3,
+          spaceBetween: 22,
+        },
+        1025: {
+          slidesPerView: 5,
+          spaceBetween: 22,
+        },
+        1440: {
+          slidesPerView: 6,
+          spaceBetween: 33,
+        },
+      }
     });
   }
 
